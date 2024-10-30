@@ -6,11 +6,32 @@
     <title>Document</title>
 </head>
 <body>
-    <input type="number"place holder="Enter the a value"value="">
-    <input type="number"place holder="Enter the b value"value="">
+    <input id="first" type="number"place holder="Enter the a value"value="">
+    <input id="second" type="number"place holder="Enter the b value"value="">
+    <br> <br/>
     <button>Click here to find the exponent</button>
+    <p id="para"></p>
+    
 </body>
 </html>
 <script>
     
+   
+    let btn=document.querySelector("button")
+    btn.addEventListener("click",myFunc);
+    function myFunc(){
+    let num = 1;
+    let val1=document.getElementById("first").value
+    let val2=document.getElementById("second").value
+    for(let i = 0; i < val2; i++){
+         num = num * val1; 
+        
+    }
+    alert("The exponent is:"+num)
+    document.getElementById("para").innerText=num
+   
+    }
+    
+    
+
 </script>
